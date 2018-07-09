@@ -1,4 +1,4 @@
-makeVector <- function(x = numeric()) {
+makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
     x <<- y
@@ -11,7 +11,7 @@ makeVector <- function(x = numeric()) {
        setsolve = setsolve,
        getsolve = getsolve)
 }
-cacheinv <- function(x, ...) {
+cacheSolve <- function(x, ...) {
   m <- x$getsolve()
   if(!is.null(m)) {
     message("getting cached data")
